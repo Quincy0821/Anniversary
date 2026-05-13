@@ -1,0 +1,117 @@
+body {
+  background-color: pink;
+  text-align: center;
+}
+
+p {
+  color: rgb(128, 0, 0);
+}
+
+.flower {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+.message {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+h1 {
+  color: red;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px pink, 0 0 10px pink, 0 0 20px red;
+  }
+  50% {
+    text-shadow: 0 0 20px pink, 0 0 30px red, 0 0 40px red;
+  }
+  100% {
+    text-shadow: 0 0 5px pink, 0 0 10px pink, 0 0 20px red;
+  }
+}
+
+#giftScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#giftScreen h2 {
+  font-size: 48px;
+  color: red;
+  animation: glow 2s ease-in-out infinite;
+  margin-bottom: 30px;
+}
+
+#giftScreen button {
+  font-size: 24px;
+  padding: 15px 30px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#giftScreen button:hover {
+  background-color: darkred;
+}
+
+.flower {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% { top: -50px; opacity: 1; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+.message {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.signature {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+

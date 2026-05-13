@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Anniversary Sonia ❤️</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- Gift Screen -->
+    <div id="giftScreen">
+      <h2>You have a gift 🎁</h2>
+      <button onclick="openGift()">Open My Gift 💝</button>
+    </div>
+
+    <!-- Main Page (hidden at first) -->
+    <div id="mainPage" style="display:none;">
+
+      <h1>Happy 1 Year Anniversary! ❤️</h1>
+
+      <div class="message">
+        <p>I can't believe its been a year already. It felt like just yesterday 
+        I took you out to get ice cream for the very first time.</p>
+        
+        <p>Nonetheless, this year has been nothing short amazing quality and 
+        learning more about each other. Every day with you has felt so effortless.</p>
+        
+        <p>You really understand me and take time to pay attention to every detail. 
+        That's what I really love about you.</p>
+        
+        <p>I wouldn't pass up our relationship for anything and I can't wait to 
+        create so many more memories and share laughters and continue to experience 
+        new things with each other.</p>
+        
+        <p>Cheers to more celebrations like this in the future.</p>
+        
+        <p class="signature">From Quince 🌹</p>
+      </div>
+
+      <!-- Music -->
+      <audio id="music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- Play Button -->
+      <button onclick="document.getElementById('music').play()">
+        Play Our Song 🎵
+      </button>
+
+    </div>
+
+    <script>
+      function openGift() {
+        document.getElementById('giftScreen').style.display = 'none';
+        document.getElementById('mainPage').style.display = 'block';
+        document.getElementById('music').play();
+      }
+
+      function createFlower() {
+        const flower = document.createElement('div');
+        flower.classList.add('flower');
+        const flowers = ['🌸', '🌺', '🌼', '🌻', '🌹'];
+        flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+        flower.style.left = Math.random() * 100 + 'vw';
+        flower.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        document.body.appendChild(flower);
+        setTimeout(() => flower.remove(), 6000);
+      }
+
+      setInterval(createFlower, 500);
+    </script>
+
+  </body>
+</html>
